@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  eset_integration:
+    build: .
+    env_file: .env
+    environment:
+      CISCO_XDR_API_CLIENT_ID: ${CISCO_XDR_API_CLIENT_ID}
+      CISCO_XDR_API_CLIENT_PASSWORD: ${CISCO_XDR_API_CLIENT_PASSWORD}
+      CISCO_XDR_API_REGION: ${CISCO_XDR_API_REGION}
+      USERNAME_INTEGRATION: ${USERNAME_INTEGRATION}
+      PASSWORD_INTEGRATION: ${PASSWORD_INTEGRATION}
+      EP_INSTANCE: ${EP_INSTANCE}
+      EI_INSTANCE: ${EI_INSTANCE}
+      ECOS_INSTANCE: ${ECOS_INSTANCE}
+      INTERVAL: ${INTERVAL}
+      INSTANCE_REGION: ${INSTANCE_REGION}
+    volumes:
+      - ./last_detection_time.yml:/eset_integration/last_detection_time.yml
