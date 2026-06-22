@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y git
 
 RUN pip install --upgrade pip
 
-RUN pip install git+https://github.com/eset-enterprise-integration/integration.git@0.3.0
+RUN pip install git+https://github.com/eset-enterprise-integration/integration.git@0.3.2
 
 COPY . .
 
