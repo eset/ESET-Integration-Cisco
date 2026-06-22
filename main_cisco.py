@@ -14,7 +14,7 @@ class ServiceClientCisco(ServiceClient):
         super().__init__()
 
     def _get_config(self) -> Config:
-        return Config("Cisco", "1.0.0")
+        return Config("Cisco", "1.0.2")
 
     def _get_env_vars(self) -> EnvVariablesCisco:
         return EnvVariablesCisco()
